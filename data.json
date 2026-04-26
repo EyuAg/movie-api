@@ -1,1 +1,67 @@
-[]
+[
+  [
+    {
+      "id": 1,
+      "title": "The Shawshank Redemption",
+      "director": "Frank Darabont",
+      "year": 1994,
+      "rating": 10,
+      "review": "A powerful story of hope and friendship. One of the greatest films ever made.",
+      "createdAt": "2024-02-10T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "The Godfather",
+      "director": "Francis Ford Coppola",
+      "year": 1972,
+      "rating": 10,
+      "review": "The definitive mafia epic that changed cinema forever.",
+      "createdAt": "2024-02-10T10:01:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Parasite",
+      "director": "Bong Joon-ho",
+      "year": 2019,
+      "rating": 10,
+      "review": "Genre-defying masterpiece that brilliantly critiques class inequality.",
+      "createdAt": "2024-02-10T10:02:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Interstellar",
+      "director": "Christopher Nolan",
+      "year": 2014,
+      "rating": 9,
+      "review": "Visually stunning and emotionally powerful. Hans Zimmer's score is breathtaking.",
+      "createdAt": "2024-02-10T10:03:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "The Matrix",
+      "director": "Lana and Lilly Wachowski",
+      "year": 1999,
+      "rating": 10,
+      "review": "Revolutionary action sequences and mind-bending philosophy.",
+      "createdAt": "2024-02-10T10:04:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "Spider-Man: Into the Spider-Verse",
+      "director": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
+      "year": 2018,
+      "rating": 10,
+      "review": "Groundbreaking animation that looks like a comic book come to life.",
+      "createdAt": "2024-02-10T10:05:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "Whiplash",
+      "director": "Damien Chazelle",
+      "year": 2014,
+      "rating": 10,
+      "review": "Intense, stressful, and brilliant. One of the best villain performances ever.",
+      "createdAt": "2024-02-10T10:06:00.000Z"
+    }
+  ]
+]
