@@ -68,6 +68,57 @@ const server = http.createServer((req, res) => {
         });
     }
 
+        else if (url.startsWith('/movies/') && method === 'PUT') {
+        const id = parseInt(url.split('/')[2]);
+        let body = '';
+
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+
+        req.on('end', () => {
+            const updatedData = JSON.parse(body);
+
+            readData((movies) => {
+                let found = false;
+
+                const updatedMovies = movies.map(movie => {
+                    if (movie.id === id) {
+                        found = true;
+                        return { ...movie, ...updatedData };
+                    }
+                    return movie;
+                });
+
+                if (!found) {
+                    res.writeHead(404);
+                    return res.end('Movie not found');
+                }
+
+                writeData(updatedMovies, () => {
+                    res.end('Movie updated successfully');
+                });
+            });
+        });
+    }
+
+    else if (url.startsWith('/movies/') && method === 'DELETE') {
+        const id = parseInt(url.split('/')[2]);
+
+        readData((movies) => {
+            const newMovies = movies.filter(m => m.id !== id);
+
+            if (movies.length === newMovies.length) {
+                res.writeHead(404);
+                return res.end('Movie not found');
+            }
+
+            writeData(newMovies, () => {
+                res.end('Movie deleted successfully');
+            });
+        });
+    }
+
     else {
         res.writeHead(404);
         res.end('Route not found');
