@@ -1,5 +1,4 @@
 [
-  [
     {
       "id": 1,
       "title": "The Shawshank Redemption",
@@ -63,5 +62,4 @@
       "review": "Intense, stressful, and brilliant. One of the best villain performances ever.",
       "createdAt": "2024-02-10T10:06:00.000Z"
     }
-  ]
 ]
