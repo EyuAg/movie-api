@@ -46,6 +46,28 @@ const server = http.createServer((req, res) => {
         });
     }
 
+        else if (url === '/movies' && method === 'POST') {
+        let body = '';
+
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+
+        req.on('end', () => {
+            const newMovie = JSON.parse(body);
+
+            readData((movies) => {
+                newMovie.id = Date.now();
+                movies.push(newMovie);
+
+                writeData(movies, () => {
+                    res.writeHead(201);
+                    res.end('Movie added successfully');
+                });
+            });
+        });
+    }
+
     else {
         res.writeHead(404);
         res.end('Route not found');
